@@ -29,6 +29,7 @@ jobs:
           # Default: ${{ github.repository }}
           repository: 'FossifyOrg/File-Manager'
           ref: '1.2.0'
+          path: 'File-Manager'
         
       # - run: sudo apt-get install libncurses5
       
