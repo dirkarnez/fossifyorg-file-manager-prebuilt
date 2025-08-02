@@ -13,9 +13,7 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     env:
-      appName: fossifyorg-file-manager
-      tagName: v1.51.1
-      targetZip: fossifyorg-file-manager-${{ github.ref_name }}.zip
+      tagName: 1.2.0
     steps:
       # - name: git clone
       #   run: |
@@ -28,7 +26,7 @@ jobs:
           # Repository name with owner. For example, actions/checkout
           # Default: ${{ github.repository }}
           repository: 'FossifyOrg/File-Manager'
-          ref: '1.2.0'
+          ref: ${{ env.tagName }}
           path: 'File-Manager'
         
       # - run: sudo apt-get install libncurses5
