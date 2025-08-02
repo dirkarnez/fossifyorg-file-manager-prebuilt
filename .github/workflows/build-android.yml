@@ -30,7 +30,7 @@ jobs:
           repository: 'FossifyOrg/File-Manager'
           ref: '1.2.0'
         
-      - run: sudo apt-get install libncurses5
+      # - run: sudo apt-get install libncurses5
       
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.0
