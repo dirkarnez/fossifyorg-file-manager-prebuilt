@@ -84,12 +84,13 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           type: 'zip'
-          path: 'File-Manager/app/build/outputs/apk/foss/release/file-manager-4-foss-release-unsigned.apk'
+          path: 'file-manager-4-foss-release-unsigned.apk'
+          dir: 'File-Manager/app/build/outputs/apk/foss/release'
           filename: "${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
           
       - name: Release prebuilt
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
+          artifacts: "File-Manager/app/build/outputs/apk/foss/release/${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
