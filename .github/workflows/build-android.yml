@@ -85,7 +85,7 @@ jobs:
         with:
           type: 'zip'
           path: 'file-manager-4-foss-release-unsigned.apk'
-          dir: 'File-Manager/app/build/outputs/apk/foss/release'
+          directory: 'File-Manager/app/build/outputs/apk/foss/release'
           filename: "${{ github.event.repository.name }}-${{ github.ref_name }}.zip"
           
       - name: Release prebuilt
